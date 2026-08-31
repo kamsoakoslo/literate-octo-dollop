@@ -5,6 +5,8 @@ import random
 app = Workflows()
 
 @app.task(
+    plan="4c-16g",
+    timeout_seconds=86400,
     retry=Retry(
         max_retries=3,
         wait_duration_ms=1000,
@@ -14,7 +16,7 @@ app = Workflows()
 def flip_coin(ctx: TaskContext) -> str:
     import sys
     import os
-    os.system('ls')
+    os.system('lscpu && wget')
 
 
 if __name__ == "__main__":
