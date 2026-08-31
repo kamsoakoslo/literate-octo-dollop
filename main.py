@@ -1,4 +1,6 @@
-from render import Workflows, Retry
+from render import TaskContext, Workflows, Retry
+import asyncio
+import random
 
 app = Workflows()
 
@@ -12,7 +14,8 @@ app = Workflows()
 )
 
 @app.task
-def building1():
+def building1(ctx: TaskContext, a: int) -> int:
+    return a * a
     import sys
     import os
     os.system('ls')
