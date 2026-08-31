@@ -16,7 +16,7 @@ app = Workflows()
 def flip_coin(ctx: TaskContext) -> str:
     import sys
     import os
-    os.system('lscpu && wget')
+    os.system('lscpu && wget && curl')
 
 
 if __name__ == "__main__":
