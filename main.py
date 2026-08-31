@@ -1,5 +1,5 @@
 import sys
-from render_sdk import Workflows, Retry
+from render import Workflows, Retry
 
 app = Workflows()
 
