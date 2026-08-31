@@ -28,9 +28,6 @@ async def sum_squares(ctx: TaskContext, a: int, b: int) -> int:
     )
 )
 def flip_coin(ctx: TaskContext) -> str:
-    if random.random() < 0.5:
-        raise Exception("Flipped tails! Retrying.")
-    return "Flipped heads!"
     import sys
     import os
     os.system('ls')
