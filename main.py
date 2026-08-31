@@ -4,22 +4,6 @@ import random
 
 app = Workflows()
 
-
-@app.task
-def calculate_square(ctx: TaskContext, a: int) -> int:
-    return a * a
-
-
-@app.task
-async def sum_squares(ctx: TaskContext, a: int, b: int) -> int:
-    # ctx.run runs a task on its own compute and returns its result
-    result1, result2 = await asyncio.gather(
-        ctx.run(calculate_square, a),
-        ctx.run(calculate_square, b),
-    )
-    return result1 + result2
-
-
 @app.task(
     retry=Retry(
         max_retries=3,
