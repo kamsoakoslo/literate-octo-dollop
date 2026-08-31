@@ -4,7 +4,7 @@ from render import Workflows, Retry
 app = Workflows()
 
 @app.task(
-  plan="pro",
+  plan="4c-16g",
   timeout_seconds=86400,
   retry=Retry(
     max_retries=3,
